@@ -1,7 +1,7 @@
 module.exports = {
   install: function (Vue) {
     Vue.directive('smooth-scroll', {
-      inserted: function (el) {
+      inserted: function (el, binding) {
         // Do not initialize smoothScroll when running server side, handle it in client
         // We do not want this script to be applied in browsers that do not support those
         // That means no smoothscroll on IE9 and below.
@@ -25,7 +25,7 @@ module.exports = {
           
           // Get the top position of an element in the document
           // return value of html.getBoundingClientRect().top ... IE : 0, other browsers : -pageYOffset
-          var end = scrollTo.nodeName === 'HTML' ? -window.pageYOffset : scrollTo.getBoundingClientRect().top + window.pageYOffset
+          var end = scrollTo.nodeName === 'HTML' ? -window.pageYOffset : scrollTo.getBoundingClientRect().top + window.pageYOffset + binding.value.value;
 
           // we use requestAnimationFrame to be called by the browser before every repaint
           var requestAnimationFrame = window.requestAnimationFrame ||
