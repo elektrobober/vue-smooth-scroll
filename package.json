@@ -1,6 +1,6 @@
 {
-  "name": "vue-smooth-scroll",
-  "version": "1.0.11",
+  "name": "vue-smooth_scroll",
+  "version": "1.0.0",
   "description": "Simple vue smooth scroll",
   "main": "dist/vue-smooth-scroll.min.js",
   "scripts": {
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alamcordeiro/vue-smooth-scroll"
+    "url": "git+https://github.com/elektrobober/vue-smooth-scroll"
   },
-  "author": "Alan Cordeiro",
+  "author": "Alan Cordeiro/Karen Atoyan",
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "^6.2.10",
